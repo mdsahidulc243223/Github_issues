@@ -1,0 +1,10 @@
+.post-card{
+    border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 10px;
+        box-shadow: 1px 1px 1px 1px gray;
+        height: 100%;
+}
+.post-card{
+     text-align: justify;
+}

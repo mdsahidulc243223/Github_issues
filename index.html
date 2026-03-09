@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Github Issues Tracker</title>
+     <link rel="shortcut icon" href="./assets/github-logo.png" type="image/x-icon">
+     <!-- font Awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     <!-- Tailwind + daisy ui -->
+      <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
-<body>
-    <H1>Git HUb Isses Tracker</H1>
+<body class="min-h-screen max-w-md bg-base-200 mx-auto">
+   <div class="logo w-[250px] pt-30 mx-auto">
+    <img class="mx-auto " src="./assets/github-logo.png">
+    <h2 class=" font-bold mx-auto">GitHub Issues Tracker</h2>
+    <p class="mx-auto">Sign in to manage your issues</p>
+   </div>
+   <div class="from pt-10">
+    <div class="card bg-base-100 w-full max-w-sm shrink-0 shadow mx-auto rounded-2xl">
+      <div class="card-body">
+        <fieldset class="fieldset">
+          <label class="label font-bold text-neutral text-[20px]">User Name</label>
+          <input id="input-userName" maxlength="11" minlength="11" type="text" class="input rounded-full" placeholder="Enter Your User Number" /><br>
+          <label class="label font-bold text-neutral text-[20px]">Password</label>
+          <input id="input-password" maxlength="8" minlength="4" type="password" class="input rounded-full" placeholder="Password" />
+           <button id="signIn-btn" class="btn btn-neutral bg-blue-700 mt-4 rounded-full">Sign in </button>
+        </fieldset>
+      </div>
+    </div>
+   </div>
+  <hr>
+   <!-- footer -->
+<footer class="footer footer-horizontal footer-center bg-white text-black-content p-10">
+  <aside>
+    <p class="font-bold">
+      Demo Credentials:
+      <br>
+     <p>Username: admin<br>
+        Password: admin123</p>
+    </p>
+    <script src="./login.js"></script>
+    <script src="./container.js"></script>
 </body>
 </html>
