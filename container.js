@@ -13,13 +13,13 @@ const displayPost=(posts)=>{
 const postContainer=document.getElementById("container");
 postContainer.innerHTML="";
 posts.forEach((post)=>{
-const borderColor = post.status === "open" ? "border-green-500" : "border-red-500";
+const borderColor = post.status === "open" ? "green" : "red";
 const statusIcon = post.status === "open"
 ? "./assets/Open-Status.png"
 :"./assets/Closed- Status .png";
 const postCard=document.createElement("div");
 postCard.innerHTML=`
- <div class="post-card bg-white  p-3 border-2 ${borderColor} rounded-lg">
+ <div class="post-card bg-white border-5 p-3 rounded-lg" style="border-color:${borderColor}">
 <div class="flex justify-between items-center">
     <img src="${statusIcon}">
     <h2 class="btn bg-amber-100 text-amber-700">${post.priority}</h2>
@@ -48,7 +48,6 @@ document.getElementById(id).classList.add("bg-black","text-white");
 }
 // toggle function  /////
 const toggleStyle = (status) => {
-
 if(status === "All"){
 displayPost(allIssues);
 cngBtnColor("All-btn");
@@ -57,12 +56,14 @@ cngBtnColor("All-btn");
 else if(status === "Open"){
 const openPosts = allIssues.filter(post => post.status === "open");
 console.log(openPosts.length);
+count.innerHTML=(openPosts.length)+' '+'Issues';
 displayPost(openPosts);
 cngBtnColor("Open-btn");
 }
 else if(status === "Closed"){
 const closedPosts = allIssues.filter(post => post.status === "closed");
 console.log(closedPosts.length);
+count.innerHTML=(closedPosts.length)+' '+'Issues';
 displayPost(closedPosts);
 cngBtnColor("Close-btn");
 }
